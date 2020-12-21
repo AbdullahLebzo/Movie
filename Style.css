@@ -16,6 +16,7 @@ body {
 .header {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     padding: 10px 0;
     text-align: center;
@@ -29,7 +30,10 @@ body {
 }
 
 .header-first {
+    overflow: hidden;
+    position: relative;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
     width: 45%;
@@ -38,6 +42,7 @@ body {
 .header-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     list-style: none;
     width: 75%;
@@ -47,9 +52,14 @@ a {
     text-decoration: none;
 }
 
+.icon {
+    display: none;
+}
+
 .header-second {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     width: 40%;
@@ -141,4 +151,66 @@ a {
 .second-section {
     padding-bottom: 1px;
     border-bottom: 3px solid  rgba(210,201,255,0.1);
+}
+
+.login-icon {
+    display: none;
+}
+
+.top-movies {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 850px) {
+
+.header-list {
+    display: none;
+    flex-direction: column;
+}
+
+.header-list li {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.icon {
+    background: black;
+    display: block;
+  }
+
+.search-bar {
+    display: none;
+}
+
+.container {
+    padding: 0 10px;
+}
+
+.login-icon {
+    display: initial;
+    position: relative;
+    top: 5px;
+}
+
+.sign-in {
+    display: none;
+}
+.header-second {
+    padding-right: 20px;
+}
+
+.header a.icon {
+    color: white;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
 }
