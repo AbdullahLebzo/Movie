@@ -2,44 +2,129 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
-    <link rel="stylesheet" href="Style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <header class="header">
-            <a href="#"><img src="logo.svg" alt="site logo" class="logo"></a>
-            <ul class="header-list">
-                <!-- <li  class="logo"><a href="#"><img src="logo.svg" alt="site logo"></a></li> -->
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">CATALOG</a></li>
-                <li><a href="#">PRICING PLAN</a></li>
-                <li><a href="#">HELP</a></li>
-                <li><a href="#"><span class="material-icons"> more_horiz</span></a></li>
-            </ul>
-            <div>
-                <input type="text">
+        <div class="header">
+            <div class="header-first">
+                <ul class="header-list">
+                    <li class="logo-header"><a href="#"><img src="logo.svg" alt="logo" class="logo"></a></li>
+                    <li class="header-menu"><a href="#">HOME</a></li>
+                    <li class="header-menu"><a href="#">CATALOG</a></li>
+                    <li class="header-menu"><a href="#">PRICING PLAN</a></li>
+                    <li class="header-menu"><a href="#">HELP</a></li>
+                    <li class="header-menu"><a href="#"><span class="material-icons">more_horiz</span></a></li>
+                </ul>
             </div>
+            <div class="header-second">
+                <div class="search-bar">
+                    <input type="text" class="header-search" placeholder="Search...">
+                    <a href="#" class="search-icon"><span class="material-icons sicon">search</span></a>
+                </div>
+                <a href="#" class="hidden-search-icon"><span class="material-icons">search</span></a>
+                <a href="#" class="language"><span>EN</span></a>
+                <button class="header-button">SIGN IN</button>
+                <a href="#" class="login-icon"><span class="material-icons">login</span></a>
+                <span class="hamburger"><span class="material-icons">menu</span></span>
+            </div>
+        </div>
 
-        </header>
+        <div class="first-section">
+            <div class="new-releases">
+                <h2>NEW ITEMS <span class="heading-part">OF THIS SEASON</span></h2>
+            </div>
+            <div class="slider">
+                <div class="slider-item0 slider-item"></div>
+                <div class="slider-item1 slider-item"></div>
+                <div class="slider-item2 slider-item"></div>
+                <div class="slider-item3 slider-item"></div>
+                <div class="slider-item4 slider-item"></div>
+                <div class="slider-item5 slider-item"></div>
+                <div class="slider-item6 slider-item"></div>
+                <div class="slider-item7 slider-item"></div>
+                <div class="slider-item8 slider-item"></div>
+                <div class="slider-item9 slider-item"></div>
+                <div class="slider-item10 slider-item"></div>
+                <div class="slider-item11 slider-item"></div>
+                <div class="slider-item12 slider-item"></div>
+                <div class="slider-item13 slider-item"></div>
+                <div class="slider-item14 slider-item"></div>
+                <div class="slider-item15 slider-item"></div>
+                <div class="slider-item16 slider-item"></div>
+                <div class="slider-item17 slider-item"></div>
+                <div class="slider-item18 slider-item"></div>
+                <div class="slider-item19 slider-item"></div>
+            </div>
+        </div>
 
+        <div class="second-section">
+            <div>
+                <h2 class="popular-movies">POPULAR MOVIES</h2>
+            </div>
+            <div class="section-divider">
+                <ul class="second-section-list">
+                    <a href="#">
+                        <li class="highlighted">NEW RELEASES</li>
+                    </a>
+                    <a href="#">
+                        <li>MOVIES</li>
+                    </a>
+                    <a href="#">
+                        <li>TV SERIES</li>
+                    </a>
+                    <a href="#">
+                        <li>CARTOONS</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
 
-
-
-
-
-
+        <div class="footer">
+            <div class="footer-first">
+                <a href="#"><img src="logo.svg" alt="logo" class="logo"></a>
+                <div class="footer-hide">
+                    <span class="copyright">&#169; 2020 Hotflix<br>Created by Dmitry Volkov</span>
+                </div>
+            </div>
+            <div class="footer-second">
+                <ul class="footer-menu">
+                    <li><a href="#" class="footer-links">About Us</a></li>
+                    <li><a href="#" class="footer-links">Contacts</a></li>
+                    <li><a href="#" class="footer-links">Privacy Policy</a></li>
+                    <li class="hidden-copyright">
+                        <div>
+                            <span class="copyright">&#169; 2020 Hotflix<br>Created by Dmitry Volkov</span>
+                        </div>
+                    </li>
+                    <li class="footer-hidden-arrow"><a href="#" class="footer-links"><span
+                                class="material-icons footer-arrow">north</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-hidden">
+                <div>
+                    <span class="copyright">&#169; 2020 Hotflix<br>Created by Dmitry Volkov</span>
+                </div>
+                <a href="#" class="footer-links"><span class="material-icons footer-arrow">north</span></a>
+            </div>
+        </div>
 
 
     </div>
+    <img src="home.jpg" alt="background" class="background-image">
+
 
 
     <script src="Script.js"></script>
+    <script type="text/javascript" src="slick/slick/slick.min.js"></script>
 </body>
 
 </html>
