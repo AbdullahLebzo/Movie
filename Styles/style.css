@@ -15,6 +15,7 @@ body {
 }
 /* Header */
 
+
 .header {
     background-color: rgba(26,25,31);
     position: fixed;
@@ -215,6 +216,42 @@ body {
     z-index: 100;
 }
 
+.popular {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.popular-items {
+    cursor: pointer;
+    width: 18%;
+}
+
+.popular-items img {
+    width: 100%;
+}
+
+.popular-items .ratings {
+    background-color: black;
+    border-radius:100%;
+    border: 3px solid green;
+    padding: 3px;
+    position: relative;
+    top: 35px;
+    left: 10px;
+}
+
+.popular-items p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.popular-items .rel-date {
+    color:  #ffd80e;
+}
+
 .items .ratings{
     background-color: black;
     border-radius:100%;
@@ -223,6 +260,10 @@ body {
     position: relative;
     top: 35px;
     left: 10px;
+}
+
+.items img {
+    cursor: pointer;
 }
 
 .items p {
@@ -259,6 +300,11 @@ body {
     text-align: center;
 }
 
+.section-divider {
+    border-bottom: 2px solid rgba(210,201,255,0.1);
+    padding-bottom: 0;
+}
+
 .first-section{
     padding: 80px 0 0 10px;
     width: 100%;
@@ -276,6 +322,10 @@ body {
     width: 100%;
 }
 
+.second-section {
+    margin-top: 70px;
+}
+
 
 .popular-movies {
     color: rgba(255,255,255,0.7);
@@ -290,11 +340,21 @@ body {
     width: 30%
 }
 
-.highlighted {
+.second-section-list a {
+    text-decoration: rgba(255,255,255,0.7);
+}
+
+#highlighted {
     border-bottom: 3px solid #ffd80e;
     color: #ffd80e;
     padding-bottom: 10px;
 }
+
+
+.second-section-list li {
+    color: rgba(255,255,255,0.7);
+}
+
 
 .second-section {
     padding-bottom: 1px;
@@ -320,12 +380,25 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
+    header {
+        width: 100%;
+    }
+
     .header-menu {
         display: none;
     }
 
     .search-bar {
         display: none;
+    }
+
+    .arrows {
+        display: none;
+    }
+    
+
+    .popular-items {
+        width: 40%;
     }
 
     .hidden-search-icon {

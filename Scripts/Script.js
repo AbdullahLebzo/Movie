@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: true,
+            dots: false,
           },
         },
         {
@@ -41,14 +41,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
       nextArrow: '<span class="material-icons arrows next-arrow">arrow_forward</span>',
     });
   });
-
+  const topId = [];
   const topTitle = [];
   const topAvg = [];
   const topPoster = [];
   const topRelease = [];
-
   function getTopRated(data) {
     for (let i = 0; i < data.results.length; i += 1) {
+      topId.push(data.results[i].id);
       topTitle.push(data.results[i].title);
       topAvg.push(data.results[i].vote_average);
       topPoster.push(data.results[i].poster_path);
@@ -87,9 +87,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
       document.querySelector(`.slider-item${i}`).appendChild(div);
     }
   }
-
-  // console.log(topTitle);
-  // console.log(topAvg);
-  // console.log(topPoster);
-  // console.log(topRelease);
 });
