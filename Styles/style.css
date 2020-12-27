@@ -22,6 +22,7 @@ body {
 /* Header */
 
 header {
+    border-bottom: 4px solid rgba(210,201,255,0.1);
     background-color: rgba(26,25,31);
     height: 70px;
     position: fixed;
@@ -33,7 +34,6 @@ header {
 
 
 .header {
-    border-bottom: 4px solid rgba(210,201,255,0.1);
     display: flex;
     flex-direction: row;
     height: 70px;
@@ -405,11 +405,6 @@ footer {
 }
 
 
-.second-section {
-    padding-bottom: 1px;
-    border-bottom: 3px solid  rgba(210,201,255,0.1);
-}
-
 .login-icon {
     display: none;
 }
@@ -528,10 +523,20 @@ footer {
     margin-top: 30px;
 }
 
+.director span {
+    color: rgba(255,255,255,0.7);
+    margin: 0 10px;
+}
+
 .stars {
     text-align: center;
     font-weight: 700;
     margin-top: 30px;
+}
+
+.stars span {
+    color: rgba(255,255,255,0.7);
+    margin: 0 10px;
 }
 
 .similar-movies {
@@ -556,7 +561,9 @@ footer {
         transition: right 0.5s linear;
     }
 
-
+    .second-section {
+        padding: 0 10px;
+    }
 
     .header-list li {
         margin: 35px 20px;
@@ -588,7 +595,48 @@ footer {
     .arrows {
         display: none;
     }
+
+    .play span {
+        position: absolute;
+        bottom: 20px;
+        left: -30px;
+    }
+
+    .hidden-sections {
+        display: none;
+    }
+
+    .movie-details {
+        padding: auto 10px;
+    }
+
+    .footer-second {
+        margin: auto 0;
+    }
+
+    .play {
+       width: 0;
+    }
+
+    .play p {
+        position: absolute;
+        top: -30px;
+        left: -40px;
+    }
     
+    .poster{
+        padding: auto 0;
+    }
+
+    .poster img {
+        left: 10px;
+        top: 70px;
+        width: 100%;
+    }
+
+    .details-bg {
+        display: none;
+    }
 
     .popular-items {
         width: 40%;
@@ -619,6 +667,8 @@ footer {
     }
 
     .footer {
+        margin: auto 10px;
+        /* margin-right: 10px; */
         flex-direction: column;
     }
 

@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const img = document.createElement('IMG');
     const image = document.createElement('IMG');
     img.setAttribute('src', `https://image.tmdb.org/t/p/w300${backgroundImg[0]}`);
+    img.classList.add('details-bg');
     image.setAttribute('src', `https://image.tmdb.org/t/p/w300${backgroundImg[0]}`);
     document.querySelector('.wrapper').appendChild(img);
     img.classList.add('background-img');
@@ -51,7 +52,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
       document.querySelector('.genre').appendChild(genreName);
     }
   }
-
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
