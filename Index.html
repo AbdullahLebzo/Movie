@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <title>Movies</title>
-    <link rel="stylesheet" href="Styles/style.css">
+	<title>Hotflix</title>
+	<link rel="stylesheet" href="Styles/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -11,34 +10,38 @@
     <link rel="stylesheet" type="text/css" href="slick/slick/slick.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="header-first">
-                <ul class="header-list">
-                    <li class="logo-header"><a href="#"><img src="Images/logo.svg" alt="logo" class="logo"></a></li>
-                    <li class="header-menu"><a href="#">HOME</a></li>
-                    <li class="header-menu"><a href="#">CATALOG</a></li>
-                    <li class="header-menu"><a href="#">PRICING PLAN</a></li>
-                    <li class="header-menu"><a href="#">HELP</a></li>
-                    <li class="header-menu"><a href="#"><span class="material-icons">more_horiz</span></a></li>
-                </ul>
-            </div>
-            <div class="header-second">
-                <div class="search-bar">
-                    <input type="text" class="header-search" placeholder="Search...">
-                    <a href="#" class="search-icon"><span class="material-icons sicon">search</span></a>
-                </div>
-                <a href="#" class="hidden-search-icon"><span class="material-icons">search</span></a>
-                <a href="#" class="language"><span>EN</span></a>
-                <button class="header-button">SIGN IN</button>
-                <a href="#" class="login-icon"><span class="material-icons">login</span></a>
+	<header>
+		<div class="header">
+			<div class="header-first">
+				<a href="Index.html" class="logo"><img src="Images/logo.svg"></a>
+				<ul class="header-list">
+					<li><a href="Index.html">HOME</a></li>
+					<li><a href="#">CATALOG</a></li>
+					<li><a href="#">PRICING PLAN</a></li>
+					<li><a href="#">HELP</a></li>
+					<li><a href="#"><span class="material-icons">more_horiz</span></a></li>
+				</ul>
+			</div>
+			<div class="header-second">
+				<form class="search">
+					<input type="text" placeholder="Search..." class="header-search">
+					<button type="submit" class="search-button"><span class="material-icons sicon">search</span></button>
+				</form>
+				<input type="text" placeholder="Search..." class="header-search hidden-header-search">
+				<a href="#" class="hidden-search-icon"><span class="material-icons">search</span></a>
+				<a href="#" class="hidden-search-icon" id="search2"><span class="material-icons">search</span></a>
+				<span class="language">EN</span>
+				<button class="header-button">SIGN IN</button>
+				<a href="#" class="login-icon"><span class="material-icons">login</span></a>
                 <span class="hamburger"><span class="material-icons">menu</span></span>
-            </div>
-        </div>
+                <span class="hamburger" id="hamburger2"><span class="material-icons">menu</span></span>
+			</div>
+		</div>
+	</header>
 
-        <div class="first-section">
+	<div class="container">
+		<div class="first-section">
             <div class="new-releases">
                 <h2>TOP <span class="heading-part">RATED MOVIES</span></h2>
             </div>
@@ -91,8 +94,10 @@
 
             </div>
         </div>
+	</div>
 
-        <div class="footer">
+	<footer>
+		<div class="footer">
             <div class="footer-first">
                 <a href="#"><img src="Images/logo.svg" alt="logo" class="logo"></a>
                 <div class="footer-hide">
@@ -120,16 +125,14 @@
                 <a href="#" class="footer-links"><span class="material-icons footer-arrow">north</span></a>
             </div>
         </div>
+    </footer>
 
 
-    </div>
-    <img src="Images/home.jpg" alt="background" class="background-image">
-
-
-
+	<img src="Images/home.jpg" alt="background" class="background-image">
+	<script type="text/javascript" src="Scripts/details.js"></script>
     <script src="Scripts/Script.js"></script>
     <script src="Scripts/popular.js"></script>
-    <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+    <script type="text/javascript" src="Scripts/slick.min.js"></script>
+    <script type="text/javascript" src="Scripts/slick.js"></script>
 </body>
-
 </html>

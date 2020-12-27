@@ -68,10 +68,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
       poster.setAttribute('src', `https://image.tmdb.org/t/p/w185${topPoster[i]}`);
       div.appendChild(poster);
       //   append title
+      const anchor = document.createElement('A');
+      anchor.setAttribute('href', `movie.html?id=${topId[i]}`);
+      anchor.classList.add('movie-title');
       const title = document.createElement('P');
       const movieName = document.createTextNode(`${topTitle[i]}`);
       title.appendChild(movieName);
-      div.appendChild(title);
+      anchor.appendChild(title);
+      div.appendChild(anchor);
       //   append movie icon
       const movieIcon = document.createElement('SPAN');
       movieIcon.innerHtml = '<span class="material-icons">play_circle_outline</span>';
@@ -87,4 +91,34 @@ window.addEventListener('DOMContentLoaded', (event) => {
       document.querySelector(`.slider-item${i}`).appendChild(div);
     }
   }
+
+  const search = document.querySelector('.hidden-header-search');
+  const element = document.querySelector('.hidden-search-icon');
+  const search2 = document.querySelector('#search2');
+  element.addEventListener('click', event => {
+    search.classList.add('mobile-search');
+    search2.style.display = 'initial';
+    element.style.display = 'none';
+  });
+
+  search2.addEventListener('click', event => {
+    search.classList.remove('mobile-search');
+    element.style.display = 'initial';
+    search2.style.display = 'none';
+  })
+
+  const list = document.querySelector('.header-list');
+  const hamburger = document.querySelector('.hamburger');
+  const hamburger2 = document.querySelector('#hamburger2');
+  hamburger.addEventListener('click', event => {
+    list.classList.add('header-list-shown');
+    hamburger2.style.display = 'initial';
+    hamburger.style.display = 'none';
+  })
+
+  hamburger2.addEventListener('click', event => {
+    list.classList.remove('header-list-shown');
+    hamburger.style.display = 'initial';
+    hamburger2.style.display = 'none';
+  })
 });

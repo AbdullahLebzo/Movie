@@ -1,32 +1,46 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 body {
-    background-color: rgba(26,25,31,0.75);
+    background-color: rgba(26,25,31);
     margin: 0;
     padding: 0;
     color: #fff;
-    position: relative;
     font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
 }
 
 .container {
-    padding: 0 10px;
+    padding: 0 10px 1;
     margin: 0 auto;
     max-width: 1270px;
+    min-height: calc(100% - 70px);
     width: 100%;
 }
 /* Header */
 
+header {
+    background-color: rgba(26,25,31);
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
 
 .header {
-    background-color: rgba(26,25,31);
-    position: fixed;
-    padding: 10px 10px;
     display: flex;
     flex-direction: row;
+    height: 70px;
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1270px;
+    padding: 0 10px;
     width: 100%;
-    z-index: 100;
 }
 
 .header-first ul {
@@ -43,6 +57,8 @@ body {
     display: flex;
     padding-left: 0;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 50%; 
 }
 
@@ -50,16 +66,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: 75%;
 }
 
 .logo {
     width: 100px;
 }
 
-.logo-header {
-    padding-right: 30px;
-}
 
 .header-second {
     color:  rgba(255,255,255,0.7);
@@ -71,6 +84,18 @@ body {
     width: 35%;
 }
 
+.hidden-header-search {
+    display: none;
+}
+
+.search {
+    width: 50%;
+}
+
+#search2 {
+    display: none;
+}
+
 .header-search {
     background-color: rgba(26,25,31,0.75);
     border: 1px solid #ffd80e;
@@ -78,45 +103,47 @@ body {
     border-radius: 5px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    float: left;
     height: 35px;
     outline-color: #ffd80e;
     width: 80%;
 }
 
-.search-icon {
+.search-button {
     background-color: rgba(26,25,31,0.75);
     border: 1px solid #ffd80e;
     border-left: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     color: rgba(255,255,255,0.7);
-    height: 38px;
+    cursor: pointer;
+    height: 39px;
     margin: 0;
+    float: left;
 }
 
 .language {
     color: rgba(255,255,255,0.7);
+    cursor: pointer;
     text-decoration: none;
 }
+
 
 .header-button {
     background-color: rgba(26,25,31,0.75);
     border: 1px solid  #ffd80e;
     border-radius: 5px;
     color: rgba(255,255,255,0.7);
+    cursor: pointer;
     height: 35px;
     width: 20%;
 }
 
-.search-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    width: 50%;
+.hamburger {
+    display: none;
 }
 
-.hamburger {
+#hamburger2 {
     display: none;
 }
 
@@ -135,6 +162,13 @@ body {
 
 /* Footer */
 
+footer {
+    background-color: rgba(26,25,31);
+    height: 70px;
+    width: 100%;
+    clear: both;
+}
+
 .footer {
     background-color: rgba(26,25,31);
     display: flex;
@@ -143,7 +177,7 @@ body {
     width: 100%;
     max-width: 1270px;
     margin: 0 auto;
-    padding: 15px 10px;
+    padding: 0 10px;
 }
 
 .footer-first {
@@ -200,7 +234,7 @@ body {
     height: 475px;
     position: absolute;
     opacity: 0.1;
-    top: 80px;
+    top: 70px;
     width: 100%; 
     z-index: -1;
 }
@@ -209,6 +243,11 @@ body {
 
 .slider-item {
     outline: none;
+}
+
+.movie-title {
+    color: #fff;
+    text-decoration: none;
 }
 
 .movie-icon {
@@ -225,7 +264,6 @@ body {
 }
 
 .popular-items {
-    cursor: pointer;
     width: 18%;
 }
 
@@ -242,6 +280,7 @@ body {
     top: 35px;
     left: 10px;
 }
+
 
 .popular-items p {
     margin-top: 0;
@@ -262,9 +301,16 @@ body {
     left: 10px;
 }
 
-.items img {
-    cursor: pointer;
+.low-ratings {
+    border: 3px solid orange;
+    background-color: black;
+    border-radius:100%;
+    padding: 3px;
+    position: relative;
+    top: 35px;
+    left: 10px;
 }
+
 
 .items p {
     margin-top: 0;
@@ -379,17 +425,140 @@ body {
     color: rgba(255,255,255,0.7);
 }
 
-@media only screen and (max-width: 900px) {
-    header {
-        width: 100%;
+.wrapper {
+    min-height: calc(100% - 70px);
+    width: 100%;
+}
+
+/*MOVIE DETAILS*/
+
+.background-img {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    filter: blur(8px);
+    height: 400px;
+    width: 100%;
+    z-index: -100;
+}
+
+.poster {
+    overflow: hidden;
+    width: 100%;
+}
+
+.poster img {
+    position: relative;
+    top: 70px;
+    left: 200px;
+    height: 460px;
+    width: 70%;
+}
+
+.title-of-movie {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.movie-duration {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.movie-duration p{
+    color: rgba(255,255,255,0.7);
+    margin: 0 50px;
+}
+
+.movie-details {
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+}
+
+.trailer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trailer-icon {
+    color: #ffd80e;
+    transform: scale(2);
+}
+
+.genre {
+    text-align: center;
+}
+
+.genre span {
+    border: 1px solid #ffd80e;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.director {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.stars {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.similar-movies {
+    margin: auto 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    
+
+
+    .header-list {
+        background-color: rgba(26,25,31);
+        display: initial;
+        position: absolute;
+        height: 100vh;
+        right: -1000px;
+        top: 54px;
     }
 
-    .header-menu {
+    .header-list-shown {
+        right: 0;
+        top: 54px;
+        transition: right 0.5s linear;
+    }
+
+
+
+    .header-list li {
+        margin: 35px 20px;
+    }
+
+
+    .search {
         display: none;
     }
 
-    .search-bar {
-        display: none;
+    .mobile-search {
+        display: initial;
+    }
+
+
+    .header-search {
+        border: 1px solid #ffd80e;
+        border-radius: 5px;
+        position: fixed;
+        top: 75px;
+        left: 75px;
+    }
+
+    .footer {
+        padding: 10px 0;
     }
 
     .arrows {
@@ -407,6 +576,7 @@ body {
     }
 
     .hamburger {
+        cursor: pointer;
         display: initial;
     }
 
