@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     search.classList.remove('mobile-search');
     element.style.display = 'initial';
     search2.style.display = 'none';
-  })
+  });
 
   const list = document.querySelector('.header-list');
   const hamburger = document.querySelector('.hamburger');
@@ -114,11 +114,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     list.classList.add('header-list-shown');
     hamburger2.style.display = 'initial';
     hamburger.style.display = 'none';
-  })
+  });
 
   hamburger2.addEventListener('click', event => {
     list.classList.remove('header-list-shown');
     hamburger.style.display = 'initial';
     hamburger2.style.display = 'none';
-  })
+  });
 });

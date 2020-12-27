@@ -15,12 +15,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const director = [];
     const dirName = data.crew.filter((name) => name.job == 'Director');
     director.push(dirName);
-    console.log(director);
     for (let i = 0; i < director.length; i += 1) {
-        const name = document.createElement('SPAN');
-        const directorName = document.createTextNode(director[0][i].name);
-        name.appendChild(directorName);
-        document.querySelector('.director').appendChild(name);
+      const name = document.createElement('SPAN');
+      const directorName = document.createTextNode(director[0][i].name);
+      name.appendChild(directorName);
+      document.querySelector('.director').appendChild(name);
     }
   }
 
