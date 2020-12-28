@@ -560,6 +560,14 @@ footer {
 .similar-movies {
     margin: auto 10px;
 }
+
+.container-search {
+    padding: 0 10px 1;
+    margin: 70px auto 0 auto;
+    max-width: 1270px;
+    min-height: calc(100% - 70px);
+    width: 100%;
+}
 @media (max-width: 1200px) {
     
 
