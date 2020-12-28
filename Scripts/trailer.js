@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     frame.setAttribute('src', `https://www.youtube.com/embed/${trailerKey[0]}`);
     frame.setAttribute('width', '561');
     frame.setAttribute('height', '408');
+    frame.setAttribute('allowfullscreen', '');
     frame.classList.add('video');
     document.querySelector('.trailer').appendChild(frame);
   }
